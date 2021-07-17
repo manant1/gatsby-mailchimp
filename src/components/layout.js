@@ -11,6 +11,9 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import SubscriptionPopup from "./subscribtion-popup"
+import 'antd/dist/antd.css';
+import CookiesConsent from "./cookies-consent"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -33,7 +36,10 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main>{children}</main>
+        <main>
+          <CookiesConsent/>
+          {children}
+        </main>
         <footer
           style={{
             marginTop: `2rem`,
