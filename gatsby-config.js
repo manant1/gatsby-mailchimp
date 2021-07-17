@@ -1,7 +1,13 @@
+if (process.env.NODE_ENV === "development") {
+  require("dotenv").config({
+    path: `.env`
+  })
+}
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Gatsby Mailchimp Demo`,
+    description: `Gatsby Mailchimp and Cookie consent demo.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
@@ -13,6 +19,16 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        // endpoint or action string which could be found in Mailchimp. Navigate to Audience ->
+        // Signup Forms -> Embedded Forms and in "Copy/paste onto your site"
+        // section copy url action string
+        endpoint: process.env.GATSBY_MAILCHIMP_ACTION,
+        timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
       },
     },
     `gatsby-transformer-sharp`,
