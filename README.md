@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # gatsby-mailchimp
 Gatsby project implementing MailChimp sign up and cookie consent warning.
 =======
@@ -108,3 +109,6 @@ Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby f
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 >>>>>>> 726d472... Initial commit from gatsby: (https://github.com/gatsbyjs/gatsby-starter-default.git)
+=======
+# gatsby-mailchimp
+>>>>>>> ffe0fa532a01dc5441f829a5a1d77f16d77f4d12
