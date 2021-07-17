@@ -2,7 +2,7 @@ import * as React from "react"
 import { Button } from 'antd';
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import SubscriptionPopup from "../components/subscribtion-popup"
+import SubscriptionPopup from "../components/subscription-popup"
 
 const IndexPage = () => {
   const [subscriptionOpen, setSubscriptionOpen] = React.useState(true);
